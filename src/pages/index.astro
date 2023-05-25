@@ -2,7 +2,8 @@
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 
-const fetchPosts = await fetch('https://www.uindie-studio.com/blog_mandala_test/wp-json/wp/v2/posts');
+//const fetchPosts = await fetch('https://www.uindie-studio.com/blog_mandala_test/wp-json/wp/v2/posts');
+const fetchPosts = await fetch('https://blog.mandalasystem.com/wp-json/wp/v2/posts');
 let posts: any = [];
 if(fetchPosts.status === 200) {
 	posts = await fetchPosts.json();
